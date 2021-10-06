@@ -29,6 +29,8 @@
 
 #display {
     grid-area: display; 
+    font-size: 50px;
+    text-align: right;
     height: 150px;
     border-radius: 10px;
     background-color: lavender;
