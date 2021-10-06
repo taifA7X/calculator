@@ -1,0 +1,54 @@
+#container {
+    display: grid;
+    background-color:lightgray;
+    height: 700px;
+    width: 600px;
+    grid-gap: 10px;
+    margin: auto;
+    padding: 10px;
+    border: 5px solid grey;
+    border-radius: 10px;
+    grid-template-areas: 
+    'display display display display'
+    'one two three plus'
+    'four five six minus'
+    'seven eight nine multi'
+    'deci xero divide equal'
+    'clear clear clear equal';
+}
+
+.btn {
+    border-radius: 10px;
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.btn:hover {
+    background-color: rgb(210, 211, 211);
+}
+
+#display {
+    grid-area: display; 
+    height: 150px;
+    border-radius: 10px;
+    background-color: lavender;
+    border: 5px solid rgb(180, 180, 180)
+}
+#one {grid-area: one;}
+#two {grid-area: two;}
+#three {grid-area: three;}
+#four {grid-area: four;}
+#five {grid-area: five;}
+#six {grid-area: six;}
+#seven {grid-area: seven;}
+#eight {grid-area: eight;}
+#nine {grid-area: nine;}
+#zero {grid-area: xero;}
+#add {grid-area: plus;}
+#subtract {grid-area: minus;}
+#multiply {grid-area: multi;}
+#divide {grid-area: divide;}
+#equal {grid-area: equal;}
+#decimal {grid-area: deci;}
+#clear {grid-area: clear;}
+
