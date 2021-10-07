@@ -1,6 +1,6 @@
 #container {
     display: grid;
-    background-color:lightgray;
+    background-color:rgb(156, 156, 156);
     height: 700px;
     width: 600px;
     grid-gap: 10px;
@@ -10,11 +10,12 @@
     border-radius: 10px;
     grid-template-areas: 
     'display display display display'
+    'clear clear delete delete'
     'one two three plus'
     'four five six minus'
     'seven eight nine multi'
     'deci xero divide equal'
-    'clear clear clear equal';
+    ;
 }
 
 .btn {
@@ -53,4 +54,8 @@
 #equal {grid-area: equal;}
 #decimal {grid-area: deci;}
 #clear {grid-area: clear;}
+#delete {
+    grid-area: delete;
+    background-color: rgb(253, 71, 71);
+}
 

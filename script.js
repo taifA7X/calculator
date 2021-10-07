@@ -37,10 +37,15 @@ const zero = document.querySelector('#zero')
 const decimal = document.querySelector('#decimal')
 const clear = document.querySelector('#clear')
 const addition = document.querySelector('#addition')
+const subtraction = document.querySelector('#subtract')
+const division = document.querySelector('#divide')
+const multiplication = document.querySelector("#multiply")
 const equal = document.querySelector('#equal')
+const del = document.querySelector('#delete')
 
 let value1 = undefined; 
 let value2 = undefined;
+let operatorSelected = undefined;
 
 one.addEventListener('click', () => display.innerHTML += 1)
 two.addEventListener('click', () => display.innerHTML += 2)
@@ -52,31 +57,47 @@ seven.addEventListener('click', () => display.innerHTML += 7)
 eight.addEventListener('click', () => display.innerHTML += 8)
 nine.addEventListener('click', () => display.innerHTML += 9)
 zero.addEventListener('click', () => display.innerHTML += 0)
-//addition.addEventListener('click', () => display.innerHTML += '+')
 decimal.addEventListener('click', () => display.innerHTML += '.')
 clear.addEventListener('click', () => display.innerHTML = '')
 
 
-
 addition.addEventListener('click', () => {
     value1 = parseInt(display.innerHTML);
+    operatorSelected = add
     display.innerHTML = ''
 })
+
+subtraction.addEventListener('click', () => {
+    value1 = parseInt(display.innerHTML);
+    operatorSelected = subtract
+    display.innerHTML = ''
+})
+
+division.addEventListener('click', () => {
+    value1 = parseInt(display.innerHTML);
+    operatorSelected = divide
+    display.innerHTML = ''
+})
+
+multiplication.addEventListener('click', () => {
+    value1 = parseInt(display.innerHTML);
+    operatorSelected = multiply
+    display.innerHTML = ''
+})
+
+del.addEventListener('click', () => {
+    display.textContent = display.textContent
+    .toString()
+    .slice(0, -1)
+})
+
 
 equal.addEventListener('click', () => {
     let result;
     value2 = parseInt(display.innerHTML);
-    console.log(value1)
-    console.log(value2)
-    result = operate(add, value1, value2)
-    display.innerHTML = result;
+    result = operate(operatorSelected, value1, value2)
+    display.innerHTML = result
 })
-
-
-
-
-
-
 
 
 
